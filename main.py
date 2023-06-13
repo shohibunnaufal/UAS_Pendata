@@ -10,7 +10,7 @@ with tab1:
     st.title("Aplikasi Prediksi Penyakit Batu Ginjal")
     
 with tab2:
-    def app(df,x,y):
+    def Prediction():
         st.title("Halaman Prediksi")
         col1,col2, col3 = st.columns(3)
         with col1:
@@ -58,7 +58,7 @@ with tab2:
             st.write("Model yang digunakan memiliki tingkat akurasi",(score*100),"%")
 
 with tab3:
-    def app(df,x,y):
+    def Visualisation():
         warnings.filterwarnings('ignore')
         st.set_option('deprecation.showPyplotGlobaluse', False)
 
@@ -116,10 +116,6 @@ def predict(x,y,freatures):
     return prediction,score
 
 import streamlit as st
-from web_functions import load_data
-
-from Tabs import home, predict,visualise
-
 #kondisi call app fuction
 if page in ["Prediction","Visualisation"]:
     Tabs[page].app(df,x,y)
