@@ -1,4 +1,4 @@
 scikit-learn
 matplotlib==3.4.1
 seaborn==0.11.1
-sklearn.metrics
+sklearn.metrics==23.1.2
