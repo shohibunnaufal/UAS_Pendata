@@ -20,7 +20,7 @@ page = st.sidebar.radio("Pages",list(Tabs.keys()))
 def load_data():
 
     #load dataset
-    df = pd.read_csv('winequality-red.csv')
+    df = read_csv_file('winequality-red.csv')
 
     x = df[["bp", "sg", "al", "su", "rbc", "pc", "pcc", "ba", "bgr", "bu", "sc", "sod", "pot", "hemo", "pcv", "wc", "rc", "htn", "dm", "cad", "appet", "pe", "ane"]]
     y = df[['classification']]
