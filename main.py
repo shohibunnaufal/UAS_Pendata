@@ -82,11 +82,7 @@ with tab3:
                 class_names=['nockd', 'ckd']
             )
             st.graphviz_chart(dot_data)
-# membuat sidebar
-st.sidebar.title("Navigasi")
 
-# membuat radio option
-page = st.sidebar.radio("Pages",list(Tabs.keys()))
 
 @st.cache()
 def load_data():
