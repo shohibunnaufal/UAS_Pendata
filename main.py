@@ -17,9 +17,6 @@ st.sidebar.title("Navigasi")
 # membuat radio option
 page = st.sidebar.radio("Pages",list(Tabs.keys()))
 
-#load dataset
-df,x,y = load_data()
-
 #kondisi call app fuction
 if page in ["Prediction","Visualisation"]:
     Tabs[page].app(df,x,y)
